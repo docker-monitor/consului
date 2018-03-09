@@ -1,0 +1,5 @@
+consul-ui:
+  image: consul-ui:1.0.0
+  command: npm run dev
+  ports:
+  - 13009:8088
