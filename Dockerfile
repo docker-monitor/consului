@@ -1,7 +1,11 @@
-FROM consul-ui:1.0.0
+FROM node:8.3.0
+
+RUN mkdir -p /app/consul-ui
 
 WORKDIR /app/consul-ui
 
 COPY . /app/consul-ui
 
-EXPOSE 8088 
+RUN npm install
+
+EXPOSE 8088
